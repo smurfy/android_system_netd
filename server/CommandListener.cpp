@@ -243,6 +243,7 @@ CommandListener::CommandListener() :
 
     if (!sNetCtrl)
         sNetCtrl = new NetworkController();
+#if 0
     if (!sTetherCtrl)
         sTetherCtrl = new TetherController();
     if (!sNatCtrl)
@@ -310,6 +311,7 @@ CommandListener::CommandListener() :
     if (int ret = RouteController::Init(NetworkController::LOCAL_NET_ID)) {
         ALOGE("failed to initialize RouteController (%s)", strerror(-ret));
     }
+#endif
 }
 
 CommandListener::InterfaceCmd::InterfaceCmd() :

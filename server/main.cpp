@@ -50,7 +50,7 @@ int main() {
     NetlinkManager *nm;
     DnsProxyListener *dpl;
     MDnsSdListener *mdnsl;
-    FwmarkServer* fwmarkServer;
+    //FwmarkServer* fwmarkServer;
 
     ALOGI("Netd 1.0 starting");
     remove_pid_file();
@@ -85,11 +85,11 @@ int main() {
         exit(1);
     }
 
-    fwmarkServer = new FwmarkServer(CommandListener::sNetCtrl);
-    if (fwmarkServer->startListener()) {
-        ALOGE("Unable to start FwmarkServer (%s)", strerror(errno));
-        exit(1);
-    }
+//    fwmarkServer = new FwmarkServer(CommandListener::sNetCtrl);
+//    if (fwmarkServer->startListener()) {
+//        ALOGE("Unable to start FwmarkServer (%s)", strerror(errno));
+//        exit(1);
+//    }
 
     /*
      * Now that we're up, we can respond to commands

@@ -25,7 +25,7 @@ LOCAL_C_INCLUDES := \
         system/netd/include \
 
 LOCAL_CLANG := true
-LOCAL_CPPFLAGS := -std=c++11 -Wall -Werror
+LOCAL_CPPFLAGS := -std=c++11 -Wall
 LOCAL_MODULE := netd
 
 LOCAL_SHARED_LIBRARIES := \
